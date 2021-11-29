@@ -1,0 +1,28 @@
+:host {
+  .form-wrapper {
+    display: flex;
+  }
+
+  .action-wrapper {
+    margin-top: 20px;
+  }
+
+  .btn {
+    border: none;
+    background: #405cf5;
+    padding: 7px 15px;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.8;
+      cursor: default;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

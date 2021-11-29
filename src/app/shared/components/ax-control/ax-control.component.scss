@@ -1,0 +1,89 @@
+:host {
+  .ax-control {
+    &.disable {
+      label {
+        color: rgb(215, 215, 215)
+      }
+
+      input {
+        border: 1px solid rgb(235, 235, 235);
+        background: rgb(250, 250, 250);
+
+        &::placeholder {
+          color: rgb(215, 215, 215);
+        }
+      }
+    }
+
+    .invalid {
+      border-color: #C30516;
+
+      &::placeholder {
+        color: #C30516;
+      }
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+  }
+
+  .control-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .icons {
+    width: 12px;
+    height: 12px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    position: absolute;
+  }
+
+  .control-clear {
+    border-radius: 50%;
+    background: rgb(221, 225, 230) url('../../../../assets/img/close_icon.svg') no-repeat center center;
+    background-size: 8px;
+    cursor: pointer;
+  }
+
+  .control-error {
+    background: url('../../../../assets/img/alert_icon.svg') no-repeat center center;
+    background-size: 12px;
+  }
+
+  .control-wrapper input {
+    border: 1px solid rgb(235, 237, 241);
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    min-width: 160px;
+    transition: all 0.3s;
+
+    &::placeholder {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background: rgb(248, 249, 251);
+    }
+
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .error {
+    font-size: 10px;
+    color: #C30516;
+    margin: 4px 0 0 5px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="ax-control">
+  <label>{{title}}</label>
+  <div class="control-wrapper">
+    <input [formControl]="control"
+           [ngClass]="{'invalid' : control.invalid}"
+           placeholder="Placeholder text">
+    <button class="icons control-clear"
+            *ngIf="control.dirty && control.valid"
+            (click)="clear()"
+    ></button>
+    <button class="icons control-error" *ngIf="control.invalid"></button>
+  </div>
+  <ng-container *ngIf="errorsToDisplay && !control.disabled">
+    <div class="error" *ngFor="let error of errorsToDisplay">{{error.message}}</div>
+  </ng-container>
+</div>

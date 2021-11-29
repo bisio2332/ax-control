@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div class="form-wrapper">
+    <ax-control title="Title"
+                [errorConfig]="errorsToDisplay"
+                [validators]="form.get('axControl')?.validator"
+                formControlName="axControl">
+    </ax-control>
+  </div>
+  <div class="action-wrapper">
+    <button [disabled]="form.invalid || form.disabled" class="btn">Send</button>
+    <button (click)="stateToggle()" class="btn">Disable Control Toggle</button>
+  </div>
+</form>
+
+
