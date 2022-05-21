@@ -10,6 +10,7 @@ import { DateValidator } from './shared/validators/date.validator';
 })
 export class AppComponent {
   title: string = 'ax-control';
+  axControl: string = 'Title'
   form: FormGroup = new FormGroup({
     axControl: new FormControl(null,
       [
