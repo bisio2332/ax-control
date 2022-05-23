@@ -26,6 +26,10 @@ export class AppComponent {
     {
       error: 'incorrectDate',
       message: 'Incorrect Date'
+    },
+    {
+      error: 'maxLength',
+      message: 'Max Length'
     }
   ];
 
